@@ -19,3 +19,25 @@ function Taketodown(){
 function displayImage(imageUrl) {
     document.getElementById('displayedImage').src = imageUrl;
 }
+
+const MainMagnifyImg = document.getElementById('displayedImage');
+function Magnify(){
+    MainMagnifyImg.classList.add('zoomin');
+    const imageContainer = document.querySelector('.slider-view');
+        const image = imageContainer.querySelector('#displayedImage');
+
+        imageContainer.addEventListener('mousemove', (event) => {
+            const xPos = (event.clientX - imageContainer.offsetLeft) / imageContainer.offsetWidth;
+            const yPos = (event.clientY - imageContainer.offsetTop) / imageContainer.offsetHeight;
+
+            image.style.transformOrigin = `${xPos * 100}% ${yPos * 100}%`;
+        });
+
+        imageContainer.addEventListener('mouseenter', () => {
+            image.classList.add('zoomed');
+        });
+
+        imageContainer.addEventListener('mouseleave', () => {
+            image.classList.remove('zoomed');
+        });
+}

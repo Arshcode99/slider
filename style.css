@@ -100,8 +100,8 @@ body {
 body::-webkit-scrollbar {
   width: 10px;
 }
-.preview-images::-webkit-scrollbar{
-    width: 0px;
+.preview-images::-webkit-scrollbar {
+  width: 0px;
 }
 body::-webkit-scrollbar-track {
   background: transparent;
@@ -158,6 +158,8 @@ body::-webkit-scrollbar-thumb {
 .slider-view img {
   width: auto;
   height: 90%;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top left;
 }
 img {
   object-fit: cover;
@@ -177,7 +179,7 @@ img {
   border-radius: 35px;
   padding: 10px;
 }
-.zoom{
+.zoom {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -188,10 +190,16 @@ img {
   border-radius: 35px;
   padding: 10px;
 }
-.zoom:hover{
+.zoomed {
+  transform: scale(2);
+}
+.zoom:hover {
   border-radius: 50%;
   background: rgba(225, 225, 225, 0.1);
   cursor: pointer;
+}
+.zoomin {
+  cursor: zoom-in;
 }
 .dot {
   width: 5px;
@@ -203,61 +211,64 @@ img {
 .activedot {
   background: #00bcd4;
 }
-.top, .bottom{
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    cursor: pointer;
-    background: #1a1a1a;
+.top,
+.bottom {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+  background: #1a1a1a;
 }
-.icon{
-    width: 20px;
-    height: 20px;
+.icon {
+  width: 20px;
+  height: 20px;
 }
-.top:hover, .bottom:hover{
-    background: rgba(0,0,0,0.5);
+.top:hover,
+.bottom:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
-.top{
-    position: sticky;
-    top: 0px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    border: 0.1px solid rgba(225, 225, 225, 0.1);
+.top {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 0.1px solid rgba(225, 225, 225, 0.1);
 }
-.bottom{
-    position: sticky;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    border: 0.1px solid rgba(225, 225, 225, 0.1);
+.bottom {
+  position: sticky;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 0.1px solid rgba(225, 225, 225, 0.1);
 }
 .info-space {
   overflow-y: scroll;
 }
 @media only screen and (max-width: 768px) {
-  .two-col{
+  .two-col {
     grid-template-columns: 1fr;
     height: 70vh;
   }
-  .main-slider{
+  .main-slider {
     grid-template-columns: 25% 1fr;
   }
-  .preview-images{
+  .preview-images {
     padding: 5px;
   }
-  .location-image{
+  .location-image {
     padding: 0;
   }
-  .slider-view{
+  .slider-view {
     border: none;
     padding: 5px;
   }
 }
 
-@media only screen and (max-width: 376px) {}
+@media only screen and (max-width: 376px) {
+}
