@@ -27,19 +27,38 @@ function toggleNextDot() {
     dots[currentIndex].classList.toggle('activedot');
 }
 // Function to display selected image in the image display div
-function displayImage(imageUrl) {
+function displayImaged(imageUrl) {
     document.getElementById('displayedImage').src = imageUrl;
     toggleNextDot();
 }
 
-const MainMagnifyImg = document.getElementById('displayedImage');
-function Magnify() {
-    MainMagnifyImg.classList.add('zoomin');
-    $(document).ready(function(){
-        $("#displayedImage").imagezoomsl({
-            zoomrange:[3,3]
-        });
-    });
+function MagnifyModel() {
+    document.getElementById('model').style.display = "block"
 };
 
+function CloseModel() {
+    document.getElementById('model').style.display = 'none';
+}
 
+
+
+//Model Logic:
+// Function to display selected image in the image display div
+function displayImage(imageUrl) {
+    document.getElementById('displayedImaged').src = imageUrl;
+}
+
+function TaketoUP() {
+    const Cont = document.getElementById('previewimages')
+    Cont.scrollTop -= 60;
+}
+function TaketoBottom() {
+    const Cont = document.getElementById('previewimages')
+    Cont.scrollTop += 60;
+}
+
+$(document).ready(function () {
+    $("#displayedImaged").imagezoomsl({
+        zoomrange: [3, 3]
+    });
+});

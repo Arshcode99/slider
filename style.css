@@ -227,6 +227,22 @@ img {
   width: 20px;
   height: 20px;
 }
+.close{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  width: min-content;
+  border-radius: 35px;
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+}
+.close:hover{
+  background: rgba(225, 225, 225, 0.1);
+}
 .top:hover,
 .bottom:hover {
   background: rgba(0, 0, 0, 0.5);
@@ -250,6 +266,27 @@ img {
 .info-space {
   overflow-y: scroll;
 }
+.model{
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(225, 225, 225, 0.1);
+  backdrop-filter: blur(90px);
+  display: none;
+}
+.model-slider{
+  width: 85%;
+  height: 65%;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  overflow: hidden;
+  margin: 100px auto;
+}
 @media only screen and (max-width: 768px) {
   .two-col {
     grid-template-columns: 1fr;
@@ -267,6 +304,19 @@ img {
   .slider-view {
     border: none;
     padding: 5px;
+  }
+  .model{
+    display: none;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+  }
+  .model-slider{
+    width: 100vw;
+    height: 40vh;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
   }
 }
 
