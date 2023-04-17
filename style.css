@@ -177,6 +177,22 @@ img {
   border-radius: 35px;
   padding: 10px;
 }
+.zoom{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  width: min-content;
+  border-radius: 35px;
+  padding: 10px;
+}
+.zoom:hover{
+  border-radius: 50%;
+  background: rgba(225, 225, 225, 0.1);
+  cursor: pointer;
+}
 .dot {
   width: 5px;
   height: 5px;
