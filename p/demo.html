@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   
+  </head>
+  <body>
+    <div id="imageContainer">
+        <img
+          src="/assets/mug1.png"
+          alt="Image 1"
+          onclick="displayImage('/assets/mug1.png')"
+        />
+        <img
+          src="/assets/mug2.png"
+          alt="Image 2"
+          onclick="displayImage('/assets/mug2.png')"
+        />
+        <img
+          src="/assets/mug3.png"
+          alt="Image 3"
+          onclick="displayImage('/assets/mug3.png')"
+        />
+        <!-- hhh  -->
+        <img
+        src="/assets/mug4.png"
+        alt="Image 1"
+        onclick="displayImage('/assets/mug1.png')"
+      />
+      <img
+        src="/assets/mug5.png"
+        alt="Image 2"
+        onclick="displayImage('/assets/mug2.png')"
+      />
+      <img
+        src="/assets/mug6.png"
+        alt="Image 3"
+        onclick="displayImage('/assets/mug3.png')"
+      />
+    </div>
+    <div id="displayDiv">
+        <img src="/assets/mug1.png" alt="Displayed Image" id="displayedImage" />
+    </div>
+
+    <script>
+        function displayImage(imageUrl) {
+            document.getElementById('displayedImage').src = imageUrl;
+        }
+    </script>
+  </body>
+</html>
