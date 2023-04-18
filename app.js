@@ -6,14 +6,25 @@ setTimeout(() => {
 }, 4500);
 
 // Slider Logic :
+
+
+//This Function Will Take The Side Navigation Of Images To Top
 function Taketotop() {
     const Cont = document.getElementById('preview-images')
     Cont.scrollTop -= 60;
 }
+
+
+
+//This Function Will Take The Side Navigation Of Images To Top
 function Taketodown() {
     const Cont = document.getElementById('preview-images')
     Cont.scrollTop += 60;
 }
+
+
+
+////This Function Will Indicate Current Image In Dots:
 const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
 function toggleNextDot() {
@@ -26,6 +37,11 @@ function toggleNextDot() {
     // Toggle "active" class on next dot
     dots[currentIndex].classList.toggle('activedot');
 }
+
+
+
+
+
 // Function to display selected image in the image display div
 function displayImaged(imageUrl) {
     document.getElementById('displayedImage').src = imageUrl;
